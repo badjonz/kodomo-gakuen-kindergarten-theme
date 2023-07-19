@@ -1,4 +1,21 @@
-<footer id="main-footer" class="home-footer">
+<?php
+// Check if the page is not index.php
+if (!is_home() && !is_front_page()) {
+  // Echo a message
+  echo "This is not index.php";
+}
+?>
+
+<?php
+// Check if the page is not index.php
+if (!is_home() && !is_front_page()) {
+  // Remove the class attribute from the footer element
+  echo "<footer id=\"main-footer\">";
+} else {
+  // Keep the class attribute for index.php
+  echo "<footer id=\"main-footer\" class=\"home-footer\">";
+}
+?>
       <div class="container footer-container">
         <div class="column">
           <h3>クイックリンク</h3>
@@ -6,19 +23,19 @@
 
           <ul class="footer__list">
             <li class="footer__item">
-              <a class='footer__link' href="./index.html"><i class="fas fa-home"></i> ホーム </a>
+              <a class='footer__link' href="<?php echo site_url() ?>"><i class="fas fa-home"></i> ホーム </a>
             </li>
             <li class="footer__item">
-              <a class='footer__link' href="./about.html"><i class="fas fa-address-card"></i> 保育方針</a>
+              <a class='footer__link' href="<?php echo site_url('/about') ?>"><i class="fas fa-address-card"></i> 保育方針</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./youji.html"><i class="fas fa-graduation-cap"></i> クラス</a>
+              <a class="footer__link" href="<?php echo site_url('/youji') ?>"><i class="fas fa-graduation-cap"></i> クラス</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./blog.html"><i class="fas fa-newspaper"></i> お知らせ・ニューズ</a>
+              <a class="footer__link" href="<?php echo site_url('/blog') ?>"><i class="fas fa-newspaper"></i> お知らせ・ニューズ</a>
             </li>
             <li class="footer__item">
-              <a href="./activities.html" class="footer__link">
+              <a href="<?php echo site_url('/activities') ?>" class="footer__link">
                 <svg class="footer__icon">
                   <use xlink:href="./images/sprite.svg#icon-soccer"></use>
                 </svg>
@@ -91,6 +108,8 @@
       </div>
     </footer>
 
-<?php wp_footer(); ?>
+    <?php wp_footer();
+
+?>
 </body>
 </html>

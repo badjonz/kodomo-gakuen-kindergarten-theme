@@ -15,6 +15,25 @@
     <div class="announcement-minimize text-color-4 hidden">
       <h2>園長からのあいさつ</h2>
     </div>
+
+    <div class="showcase-content">
+        <div>
+          <h1>
+            <span class="text-color-1">E</span
+            ><span class="text-color-2">n</span
+            ><span class="text-color-3">j</span
+            ><span class="text-color-4">o</span
+            ><span class="text-color-1">y</span> Learning With Us
+          </h1>
+          <p class="lead" lang="jp">
+            ふれあい保育・感謝・思いやり
+          </p>
+        </div>
+        <a href="./about.html" class="btn"
+          ><i class="fas fa-chevron-right"></i>
+          こども学園での保育での保育活動</a
+        >
+      </div>
 <main>
       <section id="class-info" class="flex-items section-mb-3 class-info">
         <div class="container">
