@@ -1,10 +1,4 @@
-<?php
-// Check if the page is not index.php
-if (!is_home() && !is_front_page()) {
-  // Echo a message
-  echo "This is not index.php";
-}
-?>
+
 
 <?php
 // Check if the page is not index.php

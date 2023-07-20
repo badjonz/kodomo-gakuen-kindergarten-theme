@@ -262,10 +262,15 @@ p {
   opacity: 0;
 }
 
-.col-3 .row .column > div {
+.about-info.col-3 .row .column > div {
   height: 100%;
   width: 100%;
   opacity: 0;
+}
+.col-3 .row .column > div {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
 }
 
 .col-3 .column h3 {
@@ -858,6 +863,16 @@ p {
   padding: 1.5rem 4rem;
   width: 60%;
 }
+.age-group__button--1 {
+  background-color: var(--color-primary);
+}
+.age-group__button--2 {
+  background-color: var(--color-secondary);
+}
+.age-group__button--3 {
+  background-color: var(--color-quaternary);
+}
+
 @media (max-width: 59.25em) {
   .age-group__button {
     padding: 1rem 3rem;
@@ -1463,8 +1478,7 @@ p {
   overflow: auto;
   top: 0;
   left: 0;
-
-  position: absolute;
+  position: relative;
 }
 
 .page-header > div {
@@ -1940,9 +1954,6 @@ p {
 }
 
 /* About Page */
-#about {
-  padding-top: 28rem;
-}
 
 #about img {
   border-radius: 5px;
@@ -2148,9 +2159,10 @@ p {
   }
 }
 
-#blog .blogs > div:last-child {
+#blog .blogs div:last-child > figure {
   display: flex;
   justify-content: flex-end;
+  margin: 0;
 }
 @media (max-width: 37.5em) {
   #blog .blogs > div:last-child {
@@ -2498,8 +2510,12 @@ p {
   grid-gap: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding: 20rem 0;
+  padding: 6rem 0;
 }
+#single-post .single-content .section-header h2 {
+  font-size: 3.2rem;
+}
+
 @media (max-width: 37.5em) {
   #single-post .single-content {
     grid-template-columns: 1fr;
@@ -2508,13 +2524,14 @@ p {
 }
 
 #single-post .single-content .back-to-blog--phone {
-  display: none;
+  display: inline-block;
+  font-size: 1.4rem;
   padding: 2rem 0;
 }
-@media (max-width: 37.5em) {
+/* @media (max-width: 37.5em) {
   #single-post .single-content .back-to-blog--phone {
     display: block;
-  }
+  } */
 }
 
 #single-post .single-content img {
@@ -2536,6 +2553,10 @@ p {
 }
 
 /* Aside */
+#single-post .single-content aside {
+  padding: 15rem 0;
+}
+
 .aside-content {
   border: #ccc solid 1px;
   border-radius: 5px;
@@ -2548,7 +2569,8 @@ p {
   }
 }
 
-.aside-content h3 {
+#single-post .single-content aside .aside-content h3 {
+  font-size: 1.8rem;
   line-height: 2.5;
   margin-bottom: 0.5rem;
   border-bottom: #00aeff solid 2px;
@@ -2561,6 +2583,10 @@ p {
 .aside-content ul li {
   padding: 0.3rem 0;
   border-bottom: #ddd solid 1px;
+}
+
+.aside-content ul li a {
+  font-size: 1.4rem;
 }
 
 .star {
