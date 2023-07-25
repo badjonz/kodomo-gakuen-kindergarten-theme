@@ -673,6 +673,11 @@ p {
   z-index: 15;
 }
 
+.announcement-minimize.hidden {
+  visibility: hidden;
+  display: none;
+}
+
 .announcement-minimize h2 {
   margin: auto;
 }
@@ -2531,8 +2536,8 @@ p {
 /* @media (max-width: 37.5em) {
   #single-post .single-content .back-to-blog--phone {
     display: block;
-  } */
-}
+  }
+} */
 
 #single-post .single-content img {
   height: 350px;

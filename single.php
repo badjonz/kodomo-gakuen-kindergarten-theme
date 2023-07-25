@@ -92,7 +92,7 @@ while(have_posts()){
 
 
         <div class="back-to-blog--phone">
-          <a href="./blog.html">Back to blog</a>
+          <a href="<?php echo site_url('/blog') ?>">Back to blog</a>
         </div>
       </div>
     </section>

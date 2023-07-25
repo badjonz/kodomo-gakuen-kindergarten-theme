@@ -22,6 +22,8 @@ const mediaQuery = window.matchMedia("(max-width: 37.5em)");
 const navbar = document.querySelector(".navbar");
 const navHeight = navbar.getBoundingClientRect().height;
 
+const footer = document.querySelector("#main-footer");
+
 // General page fnctonality ////////////////////////////////////////
 // Navbar animation /////////////////////////////////////////////////
 
@@ -200,6 +202,7 @@ if (
     announcementModal.classList.add("hidden");
     overlay.classList.add("hidden");
     announcementMinimize.classList.remove("hidden");
+    footer.classList.add("home-footer");
   };
 
   btnCloseModal.addEventListener("click", closeModal);
@@ -209,6 +212,7 @@ if (
     announcementModal.classList.remove("hidden");
     overlay.classList.remove("hidden");
     announcementMinimize.classList.add("hidden");
+    footer.classList.remove("home-footer");
   });
 }
 

@@ -2,7 +2,7 @@
 
 <?php
 // Check if the page is not index.php
-if (!is_home() && !is_front_page()) {
+if ( !is_front_page()) {
   // Remove the class attribute from the footer element
   echo "<footer id=\"main-footer\">";
 } else {

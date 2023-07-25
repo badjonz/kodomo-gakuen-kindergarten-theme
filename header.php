@@ -47,14 +47,15 @@
         </h1>
 
         <nav>
+
           <ul class="nav-menu__list">
-            <li class="nav-menu__item nav-menu__item--1"><a class="nav-menu__link current" href="<?php echo site_url() ?>"><span>ホーム</span> </a></li>
+            <li class="nav-menu__item nav-menu__item--1"><a class="nav-menu__link <?php if (is_front_page()) echo 'current'; ?>" href="<?php echo site_url() ?>"><span>ホーム</span> </a></li>
             
             <li class="nav-menu__item nav-menu__item--2">
-              <a class="nav-menu__link nav-menu__link--2" href="#" data-nav="1">インフォメーション</a>
+              <a class="nav-menu__link nav-menu__link--2 <?php if (is_page('about')||is_page('fees')||is_page('privacy-policy')||is_page('menu')) echo 'current'; ?>" href="#" data-nav="1">インフォメーション</a>
               <ul class="submenu-list">
                 <li class="submenu__item">
-                  <a href="<?php echo site_url('/about') ?>" class="submenu__link">
+                  <a href="<?php echo site_url('/about') ?>" class="submenu__link <?php if (is_page('about')) echo 'current-sub'; ?>">
                     <svg class="navbar__icon">
                       <use xlink:href="./images/sprite.svg#icon-import_contacts"></use>
                     </svg>
@@ -62,7 +63,7 @@
                   </a>
                 </li>
                 <li class="submenu__item">
-                  <a href="<?php echo site_url('/fees') ?>" class="submenu__link">
+                  <a href="<?php echo site_url('/fees') ?>" class="submenu__link <?php if (is_page('fees')) echo 'current-sub'; ?>">
                     <svg class="navbar__icon">
                       <use xlink:href="./images/sprite.svg#icon-coin-yen"></use>
                     </svg>
@@ -72,7 +73,7 @@
                   </a>
                 </li>
                 <li class="submenu__item">
-                  <a href="<?php echo site_url('/privacy-policy') ?>" class="submenu__link">
+                  <a href="<?php echo site_url('/privacy-policy') ?>" class="submenu__link <?php if (is_page('privacy-policy')) echo 'current-sub'; ?>">
                     <svg class="navbar__icon">
                       <use xlink:href="./images/sprite1.svg#icon-lock"></use>
                     </svg>
@@ -82,7 +83,7 @@
                   </a>
                 </li>
                 <li class="submenu__item">
-                  <a href="<?php echo site_url('/menu') ?>" class="submenu__link">
+                  <a href="<?php echo site_url('/menu') ?>" class="submenu__link <?php if (is_page('menu')) echo 'current-sub'; ?>">
                     <svg class="navbar__icon">
                       <use xlink:href="./images/sprite1.svg#icon-spoon-knife"></use>
                     </svg>
